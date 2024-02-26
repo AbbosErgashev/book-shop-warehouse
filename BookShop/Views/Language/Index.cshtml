@@ -1,0 +1,24 @@
+﻿@model List<BookShop.Business.Models.LanguageModel.ReadLanguageModel>
+
+@{
+    <div>
+        <a asp-controller="Language" asp-action="Create">Create</a>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Language</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var language in Model)
+            {
+                <tr>
+                    <td>@language.Language</td>
+                    <td><a asp-action="Delete" asp-route-id="@language.Id">Delete</a></td>
+                    <td><a asp-action="Edit" asp-route-id="@language.Id">Edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

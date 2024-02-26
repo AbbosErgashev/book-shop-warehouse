@@ -27,12 +27,14 @@ namespace BookShop.Infrastructure.Repositories
 
         public async Task<ICollection<Book>> GetAllRepository()
         {
-            return await _context.Books.ToListAsync();
+            var getAll = await _context.Books.ToListAsync();
+            return getAll;
         }
 
         public async Task<Book> GetByIdRepository(int id)
         {
-            return await _context.Books.FirstOrDefaultAsync(x => x.Id == id);
+            var getById = await _context.Books.FirstOrDefaultAsync(x => x.Id == id);
+            return getById;
         }
 
         public async Task<bool> SaveChangesAsync()

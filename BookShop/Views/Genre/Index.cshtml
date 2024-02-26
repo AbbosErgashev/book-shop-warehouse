@@ -1,0 +1,24 @@
+﻿@model List<BookShop.Business.Models.GenreModel.ReadGenreModel>
+
+@{
+    <div>
+        <a asp-controller="Genre" asp-action="Create">Create</a>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var genre in Model)
+            {
+                <tr>
+                    <td>@genre.Name</td>
+                    <td><a asp-action="Delete" asp-route-id="@genre.Id">Delete</a></td>
+                    <td><a asp-action="Edit" asp-route-id="@genre.Id">Edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
