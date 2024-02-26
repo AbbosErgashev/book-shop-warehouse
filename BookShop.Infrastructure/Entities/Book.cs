@@ -5,11 +5,17 @@ namespace BookShop.Infrastructure.Entities
 {
     public class Book : BaseEntity
     {
-        public int CategoryId { get; set; }
-        public string ISBN { get; set; } = string.Empty;
-        public string Title { get; set; } = string.Empty;
-        public string? AuthorName { get; set; }
-        public string? Description { get; set; }
-        public Category Category { get; set; } = null!;
+        public string Name { get; set; } = string.Empty;
+        public int NumberOfPage { get; set; }
+        public int BookCount { get; set; }
+        public decimal Price { get; set; }
+        public int OrderId { get; set; }
+        public int GenreId { get; set; }
+        public int PublisherId { get; set; }
+        public int LanguageId { get; set; }
+        public Order Order { get; set; } = null!;
+        public Genre Genre { get; set; } = null!;
+        public Publisher Publisher { get; set; } = null!;
+        public Language Language { get; set; } = null!;
     }
 }

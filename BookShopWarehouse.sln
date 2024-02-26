@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookShop.Domain", "BookShop\BookShop.Domain.csproj", "{D79FC9E3-FF70-4F6C-B3DF-584229F8179F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookShop.MVC", "BookShop\BookShop.MVC.csproj", "{D79FC9E3-FF70-4F6C-B3DF-584229F8179F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookShop.Infrastructure", "BookShop.Infrastructure\BookShop.Infrastructure.csproj", "{151B475D-9D32-42F8-B01D-291E39C86ED1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookShop.Infrastructure", "BookShop.Infrastructure\BookShop.Infrastructure.csproj", "{151B475D-9D32-42F8-B01D-291E39C86ED1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookShop.Business", "BookShop.Business\BookShop.Business.csproj", "{CB797E99-5F1B-47D0-B361-C7FF9967FD30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookShop.Business", "BookShop.Business\BookShop.Business.csproj", "{CB797E99-5F1B-47D0-B361-C7FF9967FD30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

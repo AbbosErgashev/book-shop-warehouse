@@ -1,14 +1,21 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using BookShop.Infrastructure.Entities;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BookShop.Business.Models.CategoryModel
+namespace BookShop.Business.Models.GenreModel
 {
     public class CreateBookModel
     {
-        [ForeignKey("Category")]
-        public int CategoryId { get; set; }
-        public required string ISBN { get; set; }
-        public required string Title { get; set; }
-        public string? AuthorName { get; set; }
-        public string? Description { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public int NumberOfPage { get; set; }
+        public int Count { get; set; }
+        public decimal Price { get; set; }
+        [ForeignKey("Order")]
+        public int OrderId { get; set; }
+        [ForeignKey("Genre")]
+        public int GenreId { get; set; }
+        [ForeignKey("Publisher")]
+        public int PublisherId { get; set; }
+        [ForeignKey("Language")]
+        public int LanguageId { get; set; }
     }
 }
