@@ -9,6 +9,6 @@ namespace BookShop.Business.Models.AuthorModel
 {
     public class UpdateAuthorModel : BaseEntity
     {
-        public string Name { get; set; } = null!;
+        public string? Name { get; set; }
     }
 }

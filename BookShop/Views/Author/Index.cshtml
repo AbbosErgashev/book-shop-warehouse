@@ -1,0 +1,23 @@
+﻿@model List<BookShop.Business.Models.AuthorModel.ReadAuthorModel>
+@{
+    <div>
+        <a asp-controller="Author" asp-action="Create">Create</a>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var author in Model)
+            {
+                <tr>
+                    <td>@author.Name</td>
+                    <td><a asp-action="Delete" asp-route-id="@author.Id">Delete</a></td>
+                    <td><a asp-action="Edit" asp-route-id="@author.Id">Edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

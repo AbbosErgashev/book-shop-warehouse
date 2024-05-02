@@ -14,14 +14,14 @@ namespace BookShop.MVC.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Indexx()
+        public async Task<IActionResult> Index()
         {
             var getAll = await _service.GetAllAuthors();
             return View(getAll);
         }
 
         [HttpGet]
-        public IActionResult Createe()
+        public IActionResult Create()
         {
             return View();
         }
@@ -34,21 +34,21 @@ namespace BookShop.MVC.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Deletee(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             await _service.DeleteAuthor(id);
             return RedirectToAction("Index");
         }
 
         [HttpGet]
-        public async Task<IActionResult> Editt(int id)
+        public async Task<IActionResult> Edit(int id)
         {
             var entity = await _service.GetAuthor(id);
             return View(entity);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edittt([FromBody] UpdateAuthorModel update)
+        public async Task<IActionResult> Edit([FromBody] UpdateAuthorModel update)
         {
             await _service.UpdateAuthor(update);
             return RedirectToAction("Index");

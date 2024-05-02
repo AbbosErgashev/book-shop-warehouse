@@ -10,10 +10,10 @@ namespace BookShop.Business.IServices
 {
     public interface IAuthorService
     {
-        public Task<IEnumerable<Author>> GetAllAuthors();
-        public Task<Author> GetAuthor(int id);
-        public Task<ReadAuthorModel> CreateAuthor(CreateAuthorModel model);
-        public Task UpdateAuthor(UpdateAuthorModel model);
-        public Task DeleteAuthor(int id);
+        Task<IEnumerable<Author>> GetAllAuthors();
+        Task<Author> GetAuthor(int id);
+        Task<ReadAuthorModel> CreateAuthor(CreateAuthorModel model);
+        Task UpdateAuthor(UpdateAuthorModel model);
+        Task DeleteAuthor(int id);
     }
 }
