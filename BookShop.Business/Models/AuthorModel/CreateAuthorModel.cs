@@ -8,6 +8,6 @@ namespace BookShop.Business.Models.AuthorModel
 {
     public class CreateAuthorModel
     {
-        public string Name { get; set; } = null!;
+        public string? Name { get; set; }
     }
 }

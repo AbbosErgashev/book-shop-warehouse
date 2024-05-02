@@ -41,7 +41,7 @@ namespace BookShop.Business.Services
         public async Task<IEnumerable<Author>> GetAllAuthors()
         {
             var getAll = await _repository.GetAllRepository();
-            if (getAll.Count == 0)
+            if (getAll is null)
             {
                 throw new ArgumentNullException(nameof(getAll));
             }
